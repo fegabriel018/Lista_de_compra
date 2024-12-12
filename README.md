@@ -1,4 +1,5 @@
-#Instruções para Rodar o Projeto - Lista de compras
+# Lista de compras
+# Instruções para Rodar o Projeto 
 Este guia fornece as etapas necessárias para configurar e rodar o aplicativo localmente.
 
 Pré-requisitos
