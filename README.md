@@ -12,7 +12,10 @@ Baixe a versão mais recente LTS (Long Term Support) e siga as instruções para
 Após a instalação, você pode verificar se o Node.js foi instalado corretamente executando o seguinte comando no terminal:
 
 bash
+´´
 node -v
+
+´´
 E para verificar a versão do npm:
 
 bash
