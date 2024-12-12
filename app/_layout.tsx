@@ -1,39 +1,49 @@
-import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
-import { useFonts } from 'expo-font';
-import { Stack } from 'expo-router';
-import * as SplashScreen from 'expo-splash-screen';
-import { StatusBar } from 'expo-status-bar';
-import { useEffect } from 'react';
-import 'react-native-reanimated';
-
-import { useColorScheme } from '@/hooks/useColorScheme';
-
-// Prevent the splash screen from auto-hiding before asset loading is complete.
-SplashScreen.preventAutoHideAsync();
+import { Stack, useRouter } from "expo-router";
+import { View, StyleSheet, TouchableOpacity, Text } from "react-native";
+import { MaterialIcons } from "@expo/vector-icons";
 
 export default function RootLayout() {
-  const colorScheme = useColorScheme();
-  const [loaded] = useFonts({
-    SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
-  });
-
-  useEffect(() => {
-    if (loaded) {
-      SplashScreen.hideAsync();
-    }
-  }, [loaded]);
-
-  if (!loaded) {
-    return null;
-  }
+  const router = useRouter();
 
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="+not-found" />
-      </Stack>
-      <StatusBar style="auto" />
-    </ThemeProvider>
+    <View style={styles.container}>
+      <Stack />
+      <View style={styles.buttonContainer}>
+        <TouchableOpacity style={styles.button} onPress={() => router.push("/")}>
+          <MaterialIcons name="home" size={24} color="black" />
+          <Text style={styles.buttonText}>Início</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.button} onPress={() => router.push("/")}>
+          <MaterialIcons name="list" size={24} color="black" />
+          <Text style={styles.buttonText}>Lista</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.button} onPress={() => router.push("/")}>
+          <MaterialIcons name="info" size={24} color="black" />
+          <Text style={styles.buttonText}>Sobre</Text>
+        </TouchableOpacity>
+      </View>
+    </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+  buttonContainer: {
+    flexDirection: "row",
+    justifyContent: "space-around",
+    padding: 10,
+    backgroundColor: "#f1f1f1",
+    position: "absolute",
+    bottom: 0,
+    width: "100%",
+  },
+  button: {
+    alignItems: "center",
+  },
+  buttonText: {
+    fontSize: 12,
+    marginTop: 4,
+  },
+});

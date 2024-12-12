@@ -1,50 +1,39 @@
-# Welcome to your Expo app 👋
+Instruções para Rodar o Projeto - Lista de compras
+Este guia fornece as etapas necessárias para configurar e rodar o aplicativo localmente.
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Pré-requisitos
+Antes de começar, é necessário ter o Node.js e o npm instalados no seu computador. Se ainda não tiver o Node.js instalado, siga as instruções abaixo:
 
-## Get started
+Instalar o Node.js
 
-1. Install dependencies
+Acesse o site oficial do Node.js: https://nodejs.org
+Baixe a versão mais recente LTS (Long Term Support) e siga as instruções para instalação conforme o seu sistema operacional.
+Após a instalação, você pode verificar se o Node.js foi instalado corretamente executando o seguinte comando no terminal:
 
-   ```bash
-   npm install
-   ```
+bash
+node -v
+E para verificar a versão do npm:
 
-2. Start the app
+bash
+npm -v
+Passos para rodar o aplicativo
 
-   ```bash
-    npx expo start
-   ```
+1. Instalar as dependências
+Com o Node.js instalado, abra o terminal na raiz do projeto e execute o seguinte comando para instalar as dependências do projeto:
 
-In the output, you'll find options to open the app in a
+bash
+npm install
+2. Rodar o aplicativo
+Após a instalação das dependências, você pode iniciar o projeto executando o comando abaixo:
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+bash
+npx expo start
+Isso abrirá o Expo DevTools no navegador, onde você poderá ver as opções para rodar o aplicativo em um dispositivo físico, emulador ou no navegador. O Expo também fornecerá um código QR que pode ser escaneado com o aplicativo Expo Go (disponível na App Store ou Google Play) para ver o aplicativo diretamente no seu dispositivo.
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+Dicas adicionais:
+Rodar no Emulador Android/iOS:
 
-## Get a fresh project
+Caso queira rodar o aplicativo no emulador Android ou iOS, basta garantir que o emulador esteja aberto e então escolher a opção no Expo DevTools.
+Hot Reloading:
 
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+O Expo oferece Hot Reloading, o que significa que qualquer alteração no código será automaticamente refletida no seu dispositivo ou emulador sem a necessidade de reiniciar o aplicativo manualmente.
