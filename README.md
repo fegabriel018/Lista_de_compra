@@ -12,13 +12,13 @@ Baixe a versão mais recente LTS (Long Term Support) e siga as instruções para
 Após a instalação, você pode verificar se o Node.js foi instalado corretamente executando o seguinte comando no terminal:
 
 ```bash
-node -v
+  node -v
 ```
 
 E para verificar a versão do npm:
 
 ```bash
-npm -v
+  npm -v
 ```
 # Passos para rodar o aplicativo
 
@@ -31,9 +31,9 @@ Com o Node.js instalado, abra o terminal na raiz do projeto e execute o seguinte
 2. Rodar o aplicativo
 Após a instalação das dependências, você pode iniciar o projeto executando o comando abaixo:
 
-   ```bash
-    npx expo start
-   ```
+```bash
+  npx expo start
+```
 Isso abrirá o Expo DevTools no navegador, onde você poderá ver as opções para rodar o aplicativo em um dispositivo físico, emulador ou no navegador. O Expo também fornecerá um código QR que pode ser escaneado com o aplicativo Expo Go (disponível na App Store ou Google Play) para ver o aplicativo diretamente no seu dispositivo.
 
 # Dicas adicionais:
